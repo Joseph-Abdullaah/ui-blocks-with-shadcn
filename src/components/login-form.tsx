@@ -55,7 +55,7 @@ export function LoginForm({
 
         <Field>
           <Button className="rounded-full md:px-8 md:py-6" type="submit">
-            Sign with email
+            Sign in with email
           </Button>
         </Field>
 
