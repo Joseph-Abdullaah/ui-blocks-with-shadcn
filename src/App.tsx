@@ -1,11 +1,15 @@
-// import LoginPage  from "@/components/loginPage"
-import CaseStudyContainer from "@/components/caseStudyContainer"
-export function App() {
+import { Navigate, Route, Routes } from "react-router-dom"
+
+import HomePage from "@/pages/home-page"
+import BlockDetailPage from "@/pages/block-detail-page"
+
+function App() {
   return (
-    <div className="">
-      {/* <LoginPage /> */}
-      <CaseStudyContainer />
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/blocks/:blockId" element={<BlockDetailPage />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
   )
 }
 
